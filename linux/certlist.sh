@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see http://www.gnu.org/licenses/.
 
-/opt/cprocsp/bin/*/certmgr --list | grep Subj > certs.txt
+/opt/cprocsp/bin/*/certmgr --list | grep -E "Subj|after" > certs.txt
 echo "Subject and KeyID of certificates saved in 'certs.txt'."
 echo -n "Number of certificates: "
 grep Subject certs.txt | wc -l
